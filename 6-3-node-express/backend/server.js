@@ -27,7 +27,8 @@ app.get("/", (req, res) => {
 import { getRandomQuote } from "./quotes.js";
 
 app.get("/api/quote", (req, res) => {
-  res.json({ quote: getRandomQuote() });
+  const quote = getRandomQuote();
+  res.json({ quote });
 });
 // Returns a random quote in JSON format
 
